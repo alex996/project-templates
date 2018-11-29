@@ -1,0 +1,29 @@
+{
+  "name": "preact-rollup",
+  "version": "1.0.0",
+  "description": "Preact + Rollup template.",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "rollup -c -w & reload -b -d dist -p 3000",
+    "build": "rimraf dist && rollup -c"
+  },
+  "author": "Alex",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-react-jsx": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "reload": "^2.3.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-terser": "^3.0.0"
+  },
+  "dependencies": {
+    "preact": "^8.3.1"
+  }
+}

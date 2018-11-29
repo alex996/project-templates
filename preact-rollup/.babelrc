@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false,
+      "targets": "> 1%, not ie <= 11, not op_mini all, not dead"
+    }]
+  ],
+  "plugins": [
+    ["@babel/transform-react-jsx", {
+      "pragma":"h", "pragmaFrag": "\"div\""
+    }],
+    "@babel/proposal-class-properties"
+  ]
+}
