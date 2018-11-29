@@ -1,0 +1,23 @@
+{
+  "name": "node-webpack",
+  "version": "1.0.0",
+  "description": "Node + Webpack template.",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "webpack -w --mode development",
+    "build": "webpack --mode production --progress",
+    "start": "NODE_ENV=production node dist/main"
+  },
+  "author": "Alex",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon-webpack-plugin": "^4.0.6",
+    "source-map-support": "^0.5.9",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
