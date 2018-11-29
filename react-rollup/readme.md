@@ -6,7 +6,7 @@ React 16 + Rollup 0.x + Babel 7 template for SPAs.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/alex996/project-templates.git
+git clone https://github.com/alex996/project-templates.git && cd project-templates
 ```
 
 2. Choose a template
@@ -37,6 +37,8 @@ Build a production bundle in `dist` folder.
 ## Tweaks
 
 Don't forget to fine-tune
+
+- bundle visualizer (e.g. [`rollup-plugin-visualizer`](https://www.npmjs.com/package/rollup-plugin-visualizer))
 
 - hashname (e.g. [`rollup-plugin-hash`](https://www.npmjs.com/package/rollup-plugin-hash))
 

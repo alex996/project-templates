@@ -6,7 +6,7 @@ React 16 + Webpack 4 + Babel 7 template for SPAs.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/alex996/project-templates.git
+git clone https://github.com/alex996/project-templates.git && cd project-templates
 ```
 
 2. Choose a template
