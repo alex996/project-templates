@@ -6,7 +6,7 @@ Node.js + Webpack 4 template for server-side APIs and apps.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/alex996/react-exercises.git
+git clone https://github.com/alex996/project-templates.git
 ```
 
 2. Choose a template

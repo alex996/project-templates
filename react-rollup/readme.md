@@ -6,7 +6,7 @@ React 16 + Rollup 0.x + Babel 7 template for SPAs.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/alex996/react-exercises.git
+git clone https://github.com/alex996/project-templates.git
 ```
 
 2. Choose a template
@@ -39,8 +39,6 @@ Build a production bundle in `dist` folder.
 Don't forget to fine-tune
 
 - hashname (e.g. [`rollup-plugin-hash`](https://www.npmjs.com/package/rollup-plugin-hash))
-
-- [`devtool`](https://webpack.js.org/configuration/devtool/) (source-map)
 
 - [`browserlist`](https://github.com/browserslist/browserslist) support
 

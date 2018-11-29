@@ -1,4 +1,4 @@
-# react-webpack
+# preact-rollup
 
 Preact 8 + Rollup 0.x + Babel 7 template for SPAs.
 
@@ -6,7 +6,7 @@ Preact 8 + Rollup 0.x + Babel 7 template for SPAs.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/alex996/react-exercises.git
+git clone https://github.com/alex996/project-templates.git
 ```
 
 2. Choose a template
