@@ -21,13 +21,13 @@ export default {
     copy({
       'index.html': `${dist}/index.html`
     }),
-    livereload(),
     serve({
       open: true,
       port: 3000,
       contentBase: dist,
       historyApiFallback: true
     }),
+    livereload(),
     babel({
       exclude: 'node_modules/**'
     }),

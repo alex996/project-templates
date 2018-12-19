@@ -4,21 +4,31 @@ import commonjs from 'rollup-plugin-commonjs'
 import copy from 'rollup-plugin-copy'
 import { terser } from 'rollup-plugin-terser'
 import replace from 'rollup-plugin-replace'
+import livereload from 'rollup-plugin-livereload'
+import serve from 'rollup-plugin-serve'
 
+const dist = 'dist'
 const production = !process.env.ROLLUP_WATCH
 const mode = production ? 'production' : 'development'
 
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/bundle.js',
+    file: `${dist}/bundle.js`,
     format: 'iife', // iife|esm|es|csj
     sourcemap: true
   },
   plugins: [
     copy({
-      'index.html': 'dist/index.html'
+      'index.html': `${dist}/index.html`
     }),
+    serve({
+      open: true,
+      port: 3000,
+      contentBase: dist,
+      historyApiFallback: true
+    }),
+    livereload(),
     // Babel at the top, otherwise can't interpret JSX
     babel({
       exclude: 'node_modules/**'
