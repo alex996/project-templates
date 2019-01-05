@@ -1,9 +1,0 @@
-{
-  "name": "project-templates",
-  "version": "1.0.0",
-  "description": "Project templates for modern front-end development.",
-  "main": "index.js",
-  "keywords": ["react", "preact", "webpack", "rollup"],
-  "author": "Alex",
-  "license": "MIT"
-}
