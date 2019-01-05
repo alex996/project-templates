@@ -15,14 +15,14 @@
     "@babel/plugin-transform-react-jsx": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "rimraf": "^2.6.3",
-    "rollup": "^0.68.2",
+    "rollup": "^1.0.2",
     "rollup-plugin-babel": "^4.2.0",
     "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-livereload": "^0.6.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-postcss": "^1.6.3",
     "rollup-plugin-serve": "^0.6.1",
-    "rollup-plugin-terser": "^3.0.0"
+    "rollup-plugin-terser": "^4.0.1"
   },
   "dependencies": {
     "preact": "^8.4.2"
