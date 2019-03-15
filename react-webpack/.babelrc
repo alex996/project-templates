@@ -3,13 +3,8 @@
     [
       "@babel/env",
       {
-        "targets": {
-          "browsers": "> 1%, not ie 11, not op_mini all, not dead"
-        }
+        "modules": false
       }
     ], "@babel/react"
-  ],
-  "plugins": [
-    "@babel/proposal-class-properties"
   ]
 }

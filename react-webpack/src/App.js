@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-class App extends Component {
-  state = {
-    message: 'React App'
-  }
+const App = props => {
+  const [message] = useState('React App')
 
-  render () {
-    return <h1>{this.state.message}</h1>
-  }
+  return (
+    <h1>{message}</h1>
+  )
 }
 
 export default App
