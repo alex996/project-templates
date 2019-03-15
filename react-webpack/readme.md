@@ -21,12 +21,12 @@ npm i
 
 4. Run the dev server
 ```sh
-npm run dev
+npm start
 ```
 
 ## CLI
 
-### `npm run dev`
+### `npm start`
 
 Launch a dev server at `localhost:3000` and watch file changes.
 
