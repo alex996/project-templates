@@ -28,7 +28,10 @@ export default {
       contentBase: dist,
       historyApiFallback: true
     }),
-    livereload(),
+    livereload({
+      // Resolves 'LiveReload protocol error'
+      watch: dist
+    }),
     // Babel at the top, otherwise can't interpret JSX
     babel({
       exclude: 'node_modules/**'

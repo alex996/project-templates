@@ -6,7 +6,7 @@
   "author": "Alex",
   "license": "MIT",
   "scripts": {
-    "dev": "rollup -c -w",
+    "start": "rollup -c -w",
     "build": "rimraf dist && rollup -c"
   },
   "dependencies": {
