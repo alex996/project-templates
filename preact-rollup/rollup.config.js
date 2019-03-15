@@ -27,7 +27,9 @@ export default {
       contentBase: dist,
       historyApiFallback: true
     }),
-    livereload(),
+    livereload({
+      watch: dist
+    }),
     babel({
       exclude: 'node_modules/**'
     }),

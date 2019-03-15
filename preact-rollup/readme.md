@@ -38,7 +38,7 @@ Build a production bundle in `dist` folder.
 
 Don't forget to fine-tune
 
-- bundle visualizer (e.g. [`rollup-plugin-visualizer`](https://www.npmjs.com/package/rollup-plugin-visualizer))
+- bundle visualizer (e.g. [`rollup-plugin-visualizer`](https://www.npmjs.com/package/rollup-plugin-visualizer) or [`source-map-explorer`](https://www.npmjs.com/package/source-map-explorer))
 
 - hashname (e.g. [`rollup-plugin-hash`](https://www.npmjs.com/package/rollup-plugin-hash))
 
