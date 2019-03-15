@@ -1,5 +1,7 @@
 # node-webpack
 
+> **Disclaimer**: I no longer recommend Node + Webpack setup. Instead, until ES modules are natively supported, I suggest to use [`esm`](https://www.npmjs.com/package/esm). Compared to Webpack, it's easier to set up (no config or plugins), and doesn't involve [`source-map-support`](https://www.npmjs.com/package/source-map-support).
+
 Node.js + Webpack 4 template for server-side APIs and apps.
 
 ## Setup
@@ -56,7 +58,7 @@ I often see Node projects using Babel. This _can_ be useful if you want to use b
 - Finished [Stage 4 proposals](https://github.com/tc39/proposals/blob/master/finished-proposals.md) land within a frequent [release cycle](https://github.com/nodejs/Release#release-schedule)
 
 - `import/export` syntax can be enabled with [`esm`](https://github.com/standard-things/esm)
-  - do note that it incurs a small runtime cost though
+  - do note that it incurs a small runtime cost though (just like `source-map-support`)
   - otherwise, you could bundle them, e.g. with `webpack`
 
 - ES6 modules are behind an [experimental flag](https://nodejs.org/api/esm.html) and will be supported natively
