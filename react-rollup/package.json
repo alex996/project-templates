@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "rollup -c -w",
-    "build": "rimraf dist && rollup -c"
+    "prebuild": "rimraf dist",
+    "build": "rollup -c"
   },
   "dependencies": {
     "react": "^16.8.4",
