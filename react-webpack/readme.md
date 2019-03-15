@@ -36,7 +36,7 @@ Build a production bundle in `dist` folder.
 
 ### `npm run stats`
 
-Generate JSON stats file to visualize the dependency tree.
+Visualize the dependency tree from a build.
 
 ### `npm run serve`
 
