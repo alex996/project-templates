@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "description": "Node + Webpack template.",
   "main": "dist/main.js",
+  "author": "Alex",
+  "license": "MIT",
   "scripts": {
     "dev": "webpack -w --mode development",
     "build": "webpack --mode production --progress",
     "start": "NODE_ENV=production node dist/main"
   },
-  "author": "Alex",
-  "license": "MIT",
   "devDependencies": {
-    "nodemon-webpack-plugin": "^4.0.7",
-    "source-map-support": "^0.5.9",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "source-map-support": "^0.5.11",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
