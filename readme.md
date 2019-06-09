@@ -12,6 +12,8 @@ Starter templates for React, Preact, and Node projects with Webpack or Rollup bu
 
 #### [Preact + Rollup](./preact-rollup)
 
+#### [Node + TypeScript](./node-typescript)
+
 ## Usage
 
 1. Clone the repo
