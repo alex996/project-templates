@@ -138,7 +138,6 @@ ts-node-dev --transpileOnly --no-notify src
   mocha -r ts-node/register src/**/__tests__/*.ts
   ```
 
-- [source maps](https://npm.im/source-map-support) in prod
 - logging ([morgan](https://npm.im/morgan), [debug](https://npm.im/debug), etc.)
 - security ([lusca](https://npm.im/lusca), [helmet](https://npm.im/helmet), etc.)
 - error handling

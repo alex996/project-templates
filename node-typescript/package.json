@@ -20,14 +20,14 @@
     "source-map-support": "^0.5.12"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
-    "@typescript-eslint/parser": "^1.9.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
-    "ts-node-dev": "^1.0.0-pre.39",
-    "typescript": "^3.5.1"
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
   }
 }
