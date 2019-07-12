@@ -1,16 +1,22 @@
-# 📑 Templates
+# :bookmark_tabs: Templates
 
 Starter templates for React, Preact, and Node projects with Webpack or Rollup bundler.
 
 ## Index
 
+> **Webpack**
+
 #### [React + Webpack](./react-webpack)
 
 #### [Node + Webpack](./node-webpack)
 
+> **Rollup**
+
 #### [React + Rollup](./react-rollup)
 
 #### [Preact + Rollup](./preact-rollup)
+
+> **TypeScript**
 
 #### [Node + TypeScript](./node-typescript)
 
@@ -36,7 +42,7 @@ npm i
 npm start
 ```
 
-5. Enjoy! 🎉
+5. Enjoy! :tada:
 
 ## Features
 
@@ -50,8 +56,8 @@ npm start
 
 - Static serve
 
-- More 🙂
+- More :slightly_smiling_face:
 
 ## Motivation
 
-To extract out recurring boilerplate and enable full control over config 💪
+To extract out recurring boilerplate and enable full control over config :muscle:
