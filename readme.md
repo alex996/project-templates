@@ -18,6 +18,8 @@ Starter templates for React, Preact, and Node projects with Webpack or Rollup bu
 
 > **TypeScript**
 
+#### [React + TypeScript](./react-typescript)
+
 #### [Node + TypeScript](./node-typescript)
 
 ## Usage
@@ -46,7 +48,7 @@ npm start
 
 ## Features
 
-- Babel transpiler
+- Transpilation
 
 - Dev server
 
