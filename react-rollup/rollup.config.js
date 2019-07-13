@@ -15,7 +15,7 @@ export default {
   input: 'src/index.js',
   output: {
     file: `${dist}/bundle.js`,
-    format: 'iife', // iife|esm|es|csj
+    format: 'iife', // iife|esm|es|cjs
     sourcemap: true
   },
   plugins: [
@@ -40,11 +40,13 @@ export default {
     resolve({
       browser: true // Look for "browser" in package.json
     }),
-    // For react-dom because it's written purely in CJS
+    // To resolve named imports from these FB packages,
+    // since they only provide default CJS exports
     commonjs({
       namedExports: {
-        // Enable import { render } from 'react-dom'
-        'node_modules/react-dom/index.js': ['render']
+        'node_modules/react/index.js': ['Component'],
+        'node_modules/react-dom/index.js': ['render'],
+        'node_modules/react-is/index.js': ['isValidElementType']
       }
     }),
     replace({
