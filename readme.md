@@ -20,6 +20,8 @@ Starter templates for React, Preact, and Node projects with Webpack or Rollup bu
 
 #### [React + TypeScript](./react-typescript)
 
+#### [React + Babel + TypeScript](./react-babel-typescript)
+
 #### [Node + TypeScript](./node-typescript)
 
 ## Usage
