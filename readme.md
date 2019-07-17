@@ -50,15 +50,15 @@ npm start
 
 ## Features
 
-- Transpilation
+- Babel / TypeScript
+
+- ESLint & Prettier
 
 - Dev server
 
 - Source maps
 
 - Bundle stats
-
-- Static serve
 
 - More :slightly_smiling_face:
 
