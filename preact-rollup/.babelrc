@@ -12,7 +12,6 @@
         {
         "pragma":"h", "pragmaFrag": "\"div\""
       }
-    ],
-    "@babel/proposal-class-properties"
+    ]
   ]
 }

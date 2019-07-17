@@ -1,13 +1,10 @@
-import { h, Component } from 'preact' // eslint-disable-line no-unused-vars
+import { h } from 'preact' // eslint-disable-line no-unused-vars
+import { useState } from 'preact/hooks'
 
-class App extends Component {
-  state = {
-    message: 'Preact App'
-  }
+const App = props => {
+  const [message] = useState('Preact App')
 
-  render () {
-    return <h1 class='title'>{this.state.message}</h1>
-  }
+  return <h1 class='title'>{message}</h1>
 }
 
 export default App

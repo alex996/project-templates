@@ -1,6 +1,6 @@
 # preact-rollup
 
-Preact 8 + Rollup 0.x + Babel 7 template for SPAs.
+Preact 8 + Rollup 1.x + Babel 7 template for SPAs.
 
 ## Setup
 
@@ -33,6 +33,10 @@ Launch a dev server at `localhost:3000` and reload on file changes.
 ### `npm run build`
 
 Build a production bundle in `dist` folder.
+
+### `npm run serve`
+
+Serve production assets on localhost.
 
 ## Tweaks
 

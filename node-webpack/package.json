@@ -13,8 +13,8 @@
   "devDependencies": {
     "nodemon-webpack-plugin": "^4.0.8",
     "source-map-support": "^0.5.12",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {

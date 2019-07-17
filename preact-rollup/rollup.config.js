@@ -8,6 +8,7 @@ import serve from 'rollup-plugin-serve'
 
 const dist = 'dist'
 const production = !process.env.ROLLUP_WATCH
+const development = !production
 
 export default {
   input: 'src/index',
@@ -19,15 +20,18 @@ export default {
   plugins: [
     resolve(),
     copy({
-      'index.html': `${dist}/index.html`
+      targets:[
+        { src: 'index.html', dest: dist }
+      ],
+      copyOnce: true
     }),
-    serve({
+    development && serve({
       open: true,
       port: 3000,
       contentBase: dist,
       historyApiFallback: true
     }),
-    livereload({
+    development && livereload({
       watch: dist
     }),
     babel({

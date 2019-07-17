@@ -23,7 +23,7 @@ module.exports = {
     new BannerPlugin({
       raw: true,
       entryOnly: true,
-      // These are required at runtime, so be mindful of the overhead.
+      // It's registered at runtime, but the overhead is negligible.
       // https://github.com/evanw/node-source-map-support/issues/122
       banner: `require('source-map-support').install();`
     })

@@ -1,6 +1,6 @@
 # react-rollup
 
-React 16 + Rollup 0.x + Babel 7 template for SPAs.
+React 16 + Rollup 1.x + Babel 7 template for SPAs.
 
 ## Setup
 
@@ -33,6 +33,12 @@ Launch a dev server at `localhost:3000` and reload on file changes.
 ### `npm run build`
 
 Build a production bundle in `dist` folder.
+
+### `npm run serve`
+
+> Tip: use this with `npm run build` to have a peek at your prod build.
+
+Serve up the contents of `dist` folder.
 
 ## Tweaks
 

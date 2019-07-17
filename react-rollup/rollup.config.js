@@ -8,7 +8,8 @@ import livereload from 'rollup-plugin-livereload'
 import serve from 'rollup-plugin-serve'
 
 const dist = 'dist'
-const production = !process.env.ROLLUP_WATCH
+const development = process.env.ROLLUP_WATCH
+const production = !development
 const mode = production ? 'production' : 'development'
 
 export default {
@@ -20,15 +21,18 @@ export default {
   },
   plugins: [
     copy({
-      'index.html': `${dist}/index.html`
+      targets:[
+        { src: 'index.html', dest: dist }
+      ],
+      copyOnce: true
     }),
-    serve({
+    development && serve({
       open: true,
       port: 3000,
       contentBase: dist,
       historyApiFallback: true
     }),
-    livereload({
+    development && livereload({
       // Resolves 'LiveReload protocol error'
       watch: dist
     }),
