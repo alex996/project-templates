@@ -48,9 +48,9 @@ export default {
     // since they only provide default CJS exports
     commonjs({
       namedExports: {
-        'node_modules/react/index.js': ['Component'],
-        'node_modules/react-dom/index.js': ['render'],
-        'node_modules/react-is/index.js': ['isValidElementType']
+        react: ['Component'],
+        'react-dom': ['render'],
+        'react-is': ['isValidElementType']
       }
     }),
     replace({
