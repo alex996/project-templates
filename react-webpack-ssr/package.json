@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "name": "react-webpack-ssr",
+  "version": "1.0.0",
+  "description": "React + Webpack SSR template",
+  "main": "dist/main.js",
+  "author": "Alex",
+  "license": "MIT",
+  "scripts": {
+    "predev": "rm -rf dist public",
+    "dev": "webpack --watch --mode development",
+    "prebuild": "rm -rf dist public",
+    "build": "webpack --progress --mode production",
+    "start": "NODE_ENV=production node ."
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "source-map-support": "^0.5.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "reload": "^3.0.1",
+    "standard": "^13.1.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "dist",
+      "public"
+    ]
+  }
+}
