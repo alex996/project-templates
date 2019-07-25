@@ -1,5 +1,6 @@
 const nodeExternals = require('webpack-node-externals')
 const NodemonPlugin = require('nodemon-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = [
   {
@@ -16,9 +17,20 @@ module.exports = [
           use: {
             loader: 'babel-loader'
           }
+        },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader'
+          ]
         }
       ]
-    }
+    },
+    plugins: [
+      new MiniCssExtractPlugin()
+    ]
   },
   {
     target: 'node',
@@ -46,6 +58,13 @@ module.exports = [
                 '@babel/syntax-dynamic-import'
               ]
             }
+          }
+        },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          loader: 'css-loader',
+          options: {
+            onlyLocals: true
           }
         }
       ]

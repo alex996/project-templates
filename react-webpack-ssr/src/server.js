@@ -22,6 +22,7 @@ const IN_DEV = NODE_ENV === 'development'
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>SSR</title>
+        <link href='/main.css' rel='stylesheet' />
       </head>
       <body>
         <div id='app'>${html}</div>
