@@ -1,32 +1,45 @@
 import React from 'react'
-import { renderToString } from 'react-dom/server'
 import express from 'express'
+import { promises } from 'fs'
+import { renderToString } from 'react-dom/server'
 import App from './App'
 
-const { PORT = 3000 } = process.env
+const { PORT = 3000, NODE_ENV = 'development' } = process.env
 
-const app = express()
+const IN_PROD = NODE_ENV === 'production'
 
-app.use(express.static('public'))
+;(async () => {
+  const manifest = IN_PROD
+    ? JSON.parse(await promises.readFile('public/manifest.json', 'utf8'))
+    : {}
 
-const html = renderToString(<App albums={[]} />)
+  const app = express()
 
-const payload = `
-  <!DOCTYPE html>
-  <html lang='en'>
-    <head>
-      <meta charset='utf-8'>
-      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-      <title>SSR</title>
-      <link href='/main.css' rel='stylesheet' />
-    </head>
-    <body>
-      <div id='app'>${html}</div>
-      <script src='/main.js' defer></script>
-    </body>
-  </html>
-`.trim()
+  app.use(express.static('public'))
 
-app.get('/', (req, res) => res.send(payload))
+  const html = renderToString(<App albums={[]} />)
 
-app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
+  let payload = `
+    <!DOCTYPE html>
+    <html lang='en'>
+      <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>SSR</title>
+        <link href='/${IN_PROD ? manifest['main.css'] : 'main.css'}' rel='stylesheet' />
+      </head>
+      <body>
+        <div id='app'>${html}</div>
+        <script src='/${IN_PROD ? manifest['main.js'] : 'main.js'}' defer></script>
+      </body>
+    </html>
+  `.trim()
+
+  if (IN_PROD) {
+    payload = payload.split(/\s{2,}/).join('') // or use html-minifier
+  }
+
+  app.get('/', (req, res) => res.send(payload))
+
+  app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
+})()
