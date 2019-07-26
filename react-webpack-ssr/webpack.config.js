@@ -1,6 +1,7 @@
 const nodeExternals = require('webpack-node-externals')
 const NodemonPlugin = require('nodemon-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 module.exports = [
   {
@@ -29,13 +30,20 @@ module.exports = [
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
+      new LiveReloadPlugin({
+        delay: 200, // To wait on server bundle
+        appendScriptTag: true
+      })
     ]
   },
   {
     target: 'node',
     devtool: 'source-map',
-    entry: './src/server.js',
+    entry: [
+      'source-map-support/register',
+      './src/server.js'
+    ],
     externals: [
       nodeExternals()
     ],
