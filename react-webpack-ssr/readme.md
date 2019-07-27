@@ -21,27 +21,30 @@ You could auto-reload the browser when front-end and/or back-end code changes.
 - [`reload` CLI](https://npm.im/reload#using-reload-as-a-command-line-application)
   - won't work with SSR unless you emit `index.html` in watch dir; runs a separate server
 
+  - [`webpack-dev-server`](https://npm.im/webpack-dev-server)
+  - won't work with SSR unless you emit `index.html` in watch dir; runs a separate server
+
 - [`webpack-livereload-plugin`](https://npm.im/webpack-livereload-plugin)
   - plugin under client config; runs a separate server with WS
-
-- [`webpack-dev-server`](https://npm.im/webpack-dev-server)
-  - won't work with SSR unless you emit `index.html` in watch dir; runs a separate server
 
 ### BE
 
 - [`reload` in Express](https://npm.im/reload#using-reload-in-express)
   - ignores changes in FE code, e.g. `src/client.js` entrypoint, and (S)CSS files
 
-### FE & BE
-
 - [`webpack-dev-middleware`](https://npm.im/webpack-dev-middleware)
   - manual & verbose setup; see [`react-ssr-setup`](https://github.com/manuelbieh/react-ssr-setup) for a working example
   - [`webpack-hot-middleware`](https://npm.im/webpack-hot-middleware) [doesn't work](https://github.com/webpack-contrib/webpack-hot-middleware/issues/292) with Webpack 4
 
-- [`universal-hot-reload`](https://npm.im/universal-hot-reload)
-  - reloads on both client & server
+### FE & BE
 
-Other options include [`browser-sync`](https://npm.im/browser-sync) and [`chokidar`](https://npm.im/chokidar). When using with a stand-alone Express server, you'd want to `wait-on dist` first.
+- [`webpack-isomorphic-dev-middleware`](https://npm.im/webpack-isomorphic-dev-middleware)
+  - reloads on both client & server changes
+
+- [`universal-hot-reload`](https://npm.im/universal-hot-reload)
+  - reloads on both client & server changes
+
+Other options include [`browser-sync`](https://npm.im/browser-sync), [`livereload`](https://npm.im/livereload), and [`chokidar`](https://npm.im/chokidar). When using with a stand-alone Express server, you'd want to `wait-on dist` first.
 
 ## Asset manifest
 
