@@ -2,6 +2,7 @@ import React from 'react'
 import express from 'express'
 import fetch from 'node-fetch'
 import { promises } from 'fs'
+import { StaticRouter } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'
 import App from './App'
 
@@ -18,10 +19,14 @@ const IN_PROD = NODE_ENV === 'production'
 
   app.use(express.static('public'))
 
-  app.get('/', async (req, res) => {
+  app.get('/*', async (req, res) => {
     const users = await (await fetch('https://jsonplaceholder.typicode.com/users')).json()
 
-    const html = renderToString(<App users={users} />)
+    const html = renderToString(
+      <StaticRouter location={req.url}>
+        <App users={users} />
+      </StaticRouter>
+    )
 
     let payload = `
       <!DOCTYPE html>

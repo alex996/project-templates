@@ -4,14 +4,25 @@ body {
   color: #1B1D1D;
 }
 
+header {
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1rem;
+  }
+}
+
+main {
+  padding: 0 3rem;
+}
+
 .card {
   display: inline-block;
-  padding: 1rem;
   margin: 1rem;
   width: 12rem;
   text-align: center;
+}
 
-  .title {
-    color: #D36AC2;
-  }
+.purple {
+  color: #D36AC2;
 }

@@ -63,10 +63,10 @@ module.exports = (env, { mode }) => {
             use: {
               loader: 'babel-loader',
               options: {
-                // Overwrite .babelrc to ignore browser targets & output esnext
+                // Overwrite .babelrc to ignore browser targets & emit esnext
                 presets: [
                   [
-                    '@babel/env', { modules: 'cjs', targets: 'node 12' }
+                    '@babel/env', { modules: false, targets: 'node 12' }
                   ],
                   '@babel/react'
                 ]

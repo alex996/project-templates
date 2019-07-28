@@ -1,12 +1,15 @@
 import './style.scss'
 import React from 'react'
 import { hydrate } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
 const { users } = window.__STATE__
 
 hydrate(
-  <App users={users} />,
+  <BrowserRouter>
+    <App users={users} />
+  </BrowserRouter>,
   document.getElementById('app'),
   () => {
     document.getElementById('ssr-state').remove()
