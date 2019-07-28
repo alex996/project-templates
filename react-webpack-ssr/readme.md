@@ -44,7 +44,7 @@ You could auto-reload the browser when front-end and/or back-end code changes.
 - [`universal-hot-reload`](https://npm.im/universal-hot-reload)
   - reloads on both client & server changes
 
-Other options include [`browser-sync`](https://npm.im/browser-sync), [`livereload`](https://npm.im/livereload), and [`chokidar`](https://npm.im/chokidar). When using with a stand-alone Express server, you'd want to `wait-on dist` first.
+Other options include [`browser-sync`](https://npm.im/browser-sync) ([tutorial](https://medium.com/@svinkle/start-a-local-live-reload-web-server-with-one-command-72f99bc6e855)), [`livereload`](https://npm.im/livereload), and [`chokidar`](https://npm.im/chokidar). When using with a stand-alone Express server, you'd want to `wait-on dist` first.
 
 ## Asset manifest
 

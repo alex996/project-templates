@@ -8,6 +8,8 @@ Starter templates for React, Preact, and Node projects with Webpack or Rollup bu
 
 #### [React + Webpack](./react-webpack)
 
+#### [React + Webpack + SSR](./react-webpack-ssr)
+
 #### [Node + Webpack](./node-webpack)
 
 > **Rollup**
