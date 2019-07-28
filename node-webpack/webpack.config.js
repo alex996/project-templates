@@ -1,6 +1,5 @@
 const nodeExternals = require('webpack-node-externals')
 const NodemonPlugin = require('nodemon-webpack-plugin')
-const { BannerPlugin } = require('webpack')
 
 module.exports = {
   // target: 'web', // default
@@ -17,15 +16,6 @@ module.exports = {
 
   plugins: [
     // To start and reload a nodemon after webpack re-builds
-    new NodemonPlugin(),
-
-    // See https://webpack.js.org/plugins/banner-plugin/
-    new BannerPlugin({
-      raw: true,
-      entryOnly: true,
-      // It's registered at runtime, but the overhead is negligible.
-      // https://github.com/evanw/node-source-map-support/issues/122
-      banner: `require('source-map-support').install();`
-    })
+    new NodemonPlugin()
   ]
 }
