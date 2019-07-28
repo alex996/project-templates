@@ -1,14 +1,10 @@
 import React from 'react'
+import Card from './Card'
 
-const App = ({ albums }) => (
-  <>
-    <h1>Albums</h1>
-    <ul>
-      {albums.map(album => (
-        <li>{album.title}</li>
-      ))}
-    </ul>
-  </>
+const App = ({ users }) => (
+  users.map(user => (
+    <Card key={user.id} {...user} />
+  ))
 )
 
 export default App
