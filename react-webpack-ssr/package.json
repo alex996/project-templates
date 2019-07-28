@@ -41,6 +41,10 @@
   },
   "standard": {
     "parser": "babel-eslint",
+    "env": [
+      "browser",
+      "node"
+    ],
     "ignore": [
       "dist",
       "public"

@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { fetchUserById } from '../api'
+import { NotFound } from './'
 
 const User = ({
   name,
@@ -25,4 +27,28 @@ const User = ({
   </>
 )
 
-export default User
+const UserContainer = ({ match: { params: { id } }, staticContext }) => {
+  const { data } = staticContext || window.__STATE__ || {}
+
+  const [user, setUser] = useState(data)
+
+  useEffect(() => {
+    if (!data) {
+      (async () =>
+        setUser(await fetchUserById(id))
+      )()
+    }
+  }, [])
+
+  if (!user) {
+    return <h1>Loading...</h1>
+  }
+
+  if (!user.id) {
+    return <NotFound />
+  }
+
+  return <User {...user} />
+}
+
+export default UserContainer

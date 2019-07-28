@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Switch, Route } from 'react-router-dom'
-import { Landing, Users, User } from './pages'
+import routes from './routes'
 
 const Navbar = props => (
   <nav>
@@ -15,30 +15,16 @@ const Navbar = props => (
   </nav>
 )
 
-const App = ({ users }) => (
+const App = props => (
   <>
     <header>
       <Navbar />
     </header>
     <main>
       <Switch>
-        <Route exact path='/' component={Landing} />
-        <Route exact path='/users' render={
-          props => <Users {...props} users={users} />
-        } />
-        <Route path='/users/:username' render={
-          props => {
-            const user = users.find(
-              ({ username }) => username === props.match.params.username
-            )
-
-            if (!user) {
-              return <h1>404 Not Found</h1>
-            }
-
-            return <User {...user} />
-          }
-        } />
+        {routes.map((route, index) => (
+          <Route key={index} {...route} />
+        ))}
       </Switch>
     </main>
   </>

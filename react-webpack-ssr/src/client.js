@@ -4,11 +4,9 @@ import { hydrate } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
-const { users } = window.__STATE__
-
 hydrate(
   <BrowserRouter>
-    <App users={users} />
+    <App />
   </BrowserRouter>,
   document.getElementById('app'),
   () => {

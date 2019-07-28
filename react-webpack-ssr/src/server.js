@@ -1,9 +1,9 @@
 import React from 'react'
 import express from 'express'
-import fetch from 'node-fetch'
 import { promises } from 'fs'
-import { StaticRouter } from 'react-router-dom'
+import { matchPath, StaticRouter } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'
+import routes from './routes'
 import App from './App'
 
 const { PORT = 3000, NODE_ENV = 'development' } = process.env
@@ -19,12 +19,27 @@ const IN_PROD = NODE_ENV === 'production'
 
   app.use(express.static('public'))
 
+  // TODO: favicon.ico falls through as well
   app.get('/*', async (req, res) => {
-    const users = await (await fetch('https://jsonplaceholder.typicode.com/users')).json()
+    let promise = Promise.resolve(null)
+
+    routes.some(route => {
+      const match = matchPath(req.path, route)
+
+      if (match && route.loadData) {
+        promise = route.loadData(match)
+      }
+
+      return match
+    })
+
+    const data = await promise
+
+    const context = data ? { data } : {}
 
     const html = renderToString(
-      <StaticRouter location={req.url}>
-        <App users={users} />
+      <StaticRouter location={req.url} context={context}>
+        <App />
       </StaticRouter>
     )
 
@@ -41,7 +56,7 @@ const IN_PROD = NODE_ENV === 'production'
         <body>
           <div id='app'>${html}</div>
           <script id='ssr-state'>
-            window.__STATE__ = ${JSON.stringify({ users })}
+            window.__STATE__ = ${JSON.stringify({ data })}
           </script>
           <script src='/${IN_PROD ? manifest['main.js'] : 'main.js'}' defer></script>
         </body>
@@ -57,7 +72,7 @@ const IN_PROD = NODE_ENV === 'production'
 
   app.use((err, req, res, next) => {
     console.error(err.stack)
-    res.status(500)
+    res.sendStatus(500)
   })
 
   app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
