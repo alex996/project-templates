@@ -1,10 +1,13 @@
 import React from 'react'
+import fetch from 'node-fetch'
 import express from 'express'
 import { promises } from 'fs'
 import { matchPath, StaticRouter } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'
 import routes from './routes'
 import App from './App'
+
+global.fetch = fetch
 
 const { PORT = 3000, NODE_ENV = 'development' } = process.env
 

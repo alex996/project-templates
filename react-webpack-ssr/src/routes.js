@@ -1,10 +1,6 @@
 import { Landing, Users, User, NotFound } from './pages'
 import { fetchUsers, fetchUserById } from './api'
 
-if (typeof global !== 'undefined') {
-  global.fetch = require('node-fetch')
-}
-
 const routes = [
   {
     path: '/',
