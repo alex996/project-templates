@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Heading } from './components'
 
-const App = (props: any) => (
+const App: FC = (props: any) => (
   <Heading message={`It's working!`} />
 )
 

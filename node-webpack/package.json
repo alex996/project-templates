@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "node-webpack",
   "version": "1.0.0",
   "description": "Node + Webpack template.",
@@ -12,9 +13,9 @@
   },
   "devDependencies": {
     "nodemon-webpack-plugin": "^4.1.1",
-    "source-map-support": "^0.5.15",
+    "source-map-support": "^0.5.16",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.10",
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {

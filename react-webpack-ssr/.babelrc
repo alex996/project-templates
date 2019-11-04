@@ -1,8 +1,11 @@
 {
   "presets": [
-    ["@babel/env", {
-      "modules": false
-    }],
+    [
+      "@babel/env", {
+        "modules": false,
+        "targets": "node 12"
+      }
+    ],
     "@babel/react"
   ]
 }

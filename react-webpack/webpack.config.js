@@ -4,7 +4,7 @@ module.exports = {
   // entry: 'src/index.js', // default
 
   // devtool: false // default
-  devtool: 'cheap-module-source-map', // Source map https://webpack.js.org/configuration/devtool/
+  devtool: 'source-map', // Source map https://webpack.js.org/configuration/devtool/
 
   // output: {
     // filename: 'main.js', // default

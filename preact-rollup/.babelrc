@@ -9,8 +9,8 @@
   "plugins": [
     [
       "@babel/transform-react-jsx",
-        {
-        "pragma":"h", "pragmaFrag": "\"div\""
+      {
+        "pragma":"h", "pragmaFrag": "Fragment"
       }
     ]
   ]
