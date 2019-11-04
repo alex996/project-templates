@@ -4,9 +4,9 @@ React 16.8.x + Webpack 4 + Babel 7 template for SSR.
 
 ## Notes
 
-- using [`source-map-support`](https://github.com/evanw/node-source-map-support) since most `devtool`s are broken and/or imprecise (webpack/webpack#5491)
+- using [`source-map-support`](https://github.com/evanw/node-source-map-support) since most `devtool`s are broken and/or imprecise ([webpack/webpack#5491](https://github.com/webpack/webpack/issues/5491))
 
-- server config overwrites `.babelrc` to bypass browser targets & emit ESNext compatible with Node 12+ only
+- `"targets": "node 12"` will emit ESNext compatible with Node 12+ only
 
 - `node .` start script works because of `"main": "dist/main.js"` field in `package.json`
   - this makes `__dirname` the root of the project, so that `/public` can be resolved [without](https://github.com/webpack/webpack-dev-middleware/issues/189#issuecomment-310769620) `node: { __dirname: false }`
@@ -60,3 +60,11 @@ fs.watchFile('public/manifest.json', { interval: 100 }, async (curr, prev) => {
 ```
 
 You could also use [`wait-on`](https://npm.im/wait-on#nodejs-api-usage), but beware of `delay` and `interval` times.
+
+## Todo
+
+Other things to consider:
+
+- minimize & auto-prefix CSS
+- cache users to avoid re-fetches when switching pages
+- code-splitting / route-based chunk loading

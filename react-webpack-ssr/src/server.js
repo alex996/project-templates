@@ -22,7 +22,9 @@ const IN_PROD = NODE_ENV === 'production'
 
   app.use(express.static('public'))
 
-  // TODO: favicon.ico falls through as well
+  // TODO: Use serve-favicon or other; make sure the req doesn't fall through below
+  app.get('/favicon.ico', (req, res) => res.sendStatus(404))
+
   app.get('/*', async (req, res) => {
     let promise = Promise.resolve(null)
 
