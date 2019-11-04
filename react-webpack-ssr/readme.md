@@ -21,7 +21,7 @@ You could auto-reload the browser when front-end and/or back-end code changes.
 - [`reload` CLI](https://npm.im/reload#using-reload-as-a-command-line-application)
   - won't work with SSR unless you emit `index.html` in watch dir; runs a separate server
 
-  - [`webpack-dev-server`](https://npm.im/webpack-dev-server)
+- [`webpack-dev-server`](https://npm.im/webpack-dev-server)
   - won't work with SSR unless you emit `index.html` in watch dir; runs a separate server
 
 - [`webpack-livereload-plugin`](https://npm.im/webpack-livereload-plugin)

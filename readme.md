@@ -56,7 +56,9 @@ npm start
 
 - ESLint & Prettier
 
-- Dev server
+- Code splitting
+
+- Bundle versioning
 
 - Source maps
 
