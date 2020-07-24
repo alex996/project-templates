@@ -6,8 +6,9 @@ for dir in */ ; do
   if [ -f 'package.json' ];
   then
     echo "Updating $dir ..."
-    ncu -u
+    ncu -u --semverLevel major
     npm install
+    npm outdated
   fi
 
   cd ..
