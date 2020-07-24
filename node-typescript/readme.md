@@ -73,7 +73,7 @@ npx nodemon -e ts -w src -x ts-node src
 ### `ts-node-dev` (fast)
 
 ```sh
-ts-node-dev --transpileOnly --no-notify src
+ts-node-dev --transpile-only --no-notify src
 ```
 
 ## ESLint & Prettier
@@ -118,6 +118,11 @@ ts-node-dev --transpileOnly --no-notify src
   }
 }
 ```
+
+## VS Code
+
+- `"editor.formatOnSave": true` formats files (including `.json`, `.md`, etc.) on file save (`Ctrl+S`)
+- `"editor.codeActionsOnSave": { "source.fixAll": true }` applies [Auto Fix for all providers](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint#release-notes) including ESLint
 
 ## Tweaks
 
