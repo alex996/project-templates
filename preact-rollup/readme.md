@@ -44,7 +44,7 @@ Don't forget to fine-tune
 
 - bundle visualizer (e.g. [`rollup-plugin-visualizer`](https://www.npmjs.com/package/rollup-plugin-visualizer) or [`source-map-explorer`](https://www.npmjs.com/package/source-map-explorer))
 
-- hashname (e.g. [`rollup-plugin-hash`](https://www.npmjs.com/package/rollup-plugin-hash))
+- hashname (e.g. [`rollup-plugin-hash`](https://www.npmjs.com/package/rollup-plugin-hash) or [built-in](https://twitter.com/rich_harris/status/1079991930623283200?lang=en))
 
 - [`browserlist`](https://github.com/browserslist/browserslist) support
 

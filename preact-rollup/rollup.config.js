@@ -38,7 +38,7 @@ export default {
       exclude: 'node_modules/**'
     }),
     postcss({
-      extract: `${dist}/styles.css`,
+      extract: `style.css`,
       minimize: production
     }),
     production && terser()
