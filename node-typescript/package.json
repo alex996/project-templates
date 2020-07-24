@@ -7,11 +7,11 @@
   "author": "Alex",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpileOnly --no-notify src",
+    "dev": "ts-node-dev --transpile-only --no-notify src",
     "prebuild": "rimraf dist",
     "build": "tsc",
     "start": "NODE_ENV=production node -r source-map-support/register dist/index.js",
-    "lint": "eslint '**/*.ts'",
+    "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier '**/*.ts' --write"
   },
